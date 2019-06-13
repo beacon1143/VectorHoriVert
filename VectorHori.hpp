@@ -15,7 +15,8 @@ namespace VECTOR_HORI_VERT {
     friend VectorHori<T1> operator+(Vector<T1>& first, Vector<T1>& second);
 
     VectorHori() = delete;
-    explicit VectorHori(int size, std::string filename);
+    explicit VectorHori(unsigned int size, std::string filename);
+
     VectorHori(const Vector<T>& other);
     VectorHori(const VectorHori<T>& other);
     VectorHori(Vector<T>&& tmp);
@@ -24,4 +25,4 @@ namespace VECTOR_HORI_VERT {
 
 } // namespace
 
-#endif
+#endif // __VECTORHORI_HPP_INCLUDED__

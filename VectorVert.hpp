@@ -14,7 +14,8 @@ namespace VECTOR_HORI_VERT {
     //template <typename T>
 
     VectorVert() = delete;
-    explicit VectorVert(int size, std::string filename);
+    explicit VectorVert(unsigned int size, std::string filename);
+
     VectorVert(const Vector<T>& other);
     VectorVert(VectorVert<T>&& tmp);
     ~VectorVert();
@@ -22,4 +23,4 @@ namespace VECTOR_HORI_VERT {
 
 } // namespace
 
-#endif
+#endif // __VECTORVERT_HPP_INCLUDED__

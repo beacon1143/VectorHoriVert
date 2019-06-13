@@ -5,7 +5,7 @@ namespace VECTOR_HORI_VERT {
   template <typename T>
   void VectorHori<T>::Output() const {
     std::ofstream fil;
-    fil.open(this->get_filename().c_str(), std::ios_base::out);
+    fil.open(this->get_filename().c_str(), std::ios_base::app);
     if (!fil.is_open()) {
       throw std::invalid_argument("Error! Cannot open file " + this->get_filename() + "!\n");
     }
@@ -35,7 +35,7 @@ namespace VECTOR_HORI_VERT {
   }*/
 
   template <typename T>
-  VectorHori<T>::VectorHori(int size, std::string filename)
+  VectorHori<T>::VectorHori(const unsigned int size, std::string filename)
     : Vector<T>(size, filename)
   {
   }
