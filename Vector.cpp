@@ -54,7 +54,7 @@ namespace VECTOR_HORI_VERT {
     filename_ = other.filename_;
     size_ = other.size_;
     if (vector_) {
-      delete vector_;
+      delete[] vector_;
     }
     vector_ = new T[size_];
     for (unsigned int i = 0; i < size_; i++) {
@@ -78,7 +78,7 @@ namespace VECTOR_HORI_VERT {
     filename_ = tmp.filename_;
     size_ = tmp.size_;
     if (vector_) {
-      delete vector_;
+      delete[] vector_;
     }
     vector_ = tmp.vector_;
     tmp.vector_ = nullptr;
