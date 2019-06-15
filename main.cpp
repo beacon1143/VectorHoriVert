@@ -76,7 +76,7 @@ int main() {
         i++;
       }
 
-      vectorVector.emplace_back(curVect);
+      vectorVector.push_back(curVect);
     }
 
     inputFile.close();
