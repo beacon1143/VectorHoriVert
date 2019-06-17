@@ -13,7 +13,7 @@ namespace VECTOR_HORI_VERT {
     for (unsigned int i = 0; i < this->get_size(); i++) {
       fil << this->vector_[i] << '\n';
     }
-
+    fil << std::endl;
     fil.close();
   }
 
