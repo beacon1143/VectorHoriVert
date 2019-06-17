@@ -18,12 +18,12 @@ namespace VECTOR_HORI_VERT {
     fil.close();
   }
 
-  template <typename T>
-  VectorHori<T> operator+(Vector<T>& first, Vector<T>& second) {
+  template <typename T1>
+  VectorHori<T1> operator+(Vector<T1>& first, Vector<T1>& second) {
     if ( first.get_size() != second.get_size() ) {
       throw std::invalid_argument("Error! Vectors have different lengths!\n");
     }
-    VectorHori<T> retVector( first.get_size(), first.get_filename() );
+    VectorHori<T1> retVector( first.get_size(), first.get_filename() );
     for (unsigned int i = 0; i < retVector.size_; i++) {
       retVector.vector_[i] = first[i] + second[i];
     }
