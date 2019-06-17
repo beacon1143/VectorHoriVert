@@ -23,7 +23,7 @@ namespace VECTOR_HORI_VERT {
     virtual void Output() const = 0;
 
     Vector() = delete;
-    explicit Vector(unsigned int size, std::string filename);
+    explicit Vector(unsigned int size, const std::string& filename);
 
     Vector(const Vector<T>& other);
     Vector& operator=(const Vector<T>& other);

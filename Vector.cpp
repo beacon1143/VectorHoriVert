@@ -19,7 +19,7 @@ namespace VECTOR_HORI_VERT {
   }*/
 
   template <typename T>
-  Vector<T>::Vector(const unsigned int size, std::string filename) {
+  Vector<T>::Vector(const unsigned int size, const std::string& filename) {
     filename_ = filename;
 
     // output file cleanup

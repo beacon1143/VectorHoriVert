@@ -10,7 +10,7 @@ namespace VECTOR_HORI_VERT {
   template <typename T>
   class FactoryVert : public Factory<T> {
   public:
-    virtual std::shared_ptr<Vector<T>> Create(const unsigned int size, std::string filename) const override final {
+    virtual std::shared_ptr<Vector<T>> Create(const unsigned int size, const std::string& filename) const override final {
       return std::make_shared<VectorVert<T>>(size, filename);
     }
 

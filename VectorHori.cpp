@@ -35,7 +35,7 @@ namespace VECTOR_HORI_VERT {
   }*/
 
   template <typename T>
-  VectorHori<T>::VectorHori(const unsigned int size, std::string filename)
+  VectorHori<T>::VectorHori(const unsigned int size, const std::string& filename)
     : Vector<T>(size, filename)
   {
   }

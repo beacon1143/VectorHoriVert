@@ -22,7 +22,7 @@ namespace VECTOR_HORI_VERT {
   }*/
 
   template <typename T>
-  VectorVert<T>::VectorVert(const unsigned int size, std::string filename)
+  VectorVert<T>::VectorVert(const unsigned int size, const std::string& filename)
     : Vector<T>(size, filename)
   {
   }

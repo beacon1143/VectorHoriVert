@@ -14,7 +14,7 @@ namespace VECTOR_HORI_VERT {
     //template <typename T>
 
     VectorVert() = delete;
-    explicit VectorVert(unsigned int size, std::string filename);
+    explicit VectorVert(unsigned int size, const std::string& filename);
 
     VectorVert(const Vector<T>& other);
     VectorVert(VectorVert<T>&& tmp);
