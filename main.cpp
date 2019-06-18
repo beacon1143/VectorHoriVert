@@ -18,7 +18,7 @@
 
 using namespace VECTOR_HORI_VERT;
 
-typedef int EL_TYPE;
+using EL_TYPE = int;    // typedef int EL_TYPE;
 
 int main() {
   try {
