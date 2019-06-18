@@ -4,6 +4,7 @@
 #include <string>
 #include <fstream>
 #include <stdexcept>
+#include <functional>
 
 namespace VECTOR_HORI_VERT {
 
@@ -21,6 +22,8 @@ namespace VECTOR_HORI_VERT {
     T& operator[](unsigned int i);
 
     virtual void Output() const = 0;
+
+    void BubbleSort(std::function<bool(const T left, const T right)> NeedSwap);
 
     Vector() = delete;
     explicit Vector(unsigned int size, const std::string& filename);

@@ -83,6 +83,12 @@ int main() {
 
     /* range-based loop */
     for (const auto& vect : vectorVector) {
+      vect->BubbleSort(
+        /* lambda function is argument of BubbleSort() */
+        [](const EL_TYPE left, const EL_TYPE right)->bool {
+          return left > right;
+        }
+      ); // BubbleSort()
       vect->Output();
     }
 

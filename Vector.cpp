@@ -12,6 +12,34 @@ namespace VECTOR_HORI_VERT {
     return filename_;
   }
 
+  template <typename T>
+  T& Vector<T>::operator[](unsigned int i) {
+    if (i >= size_) {
+      throw std::out_of_range("Error: Index is out of range!\n");
+    }
+    return vector_[i];
+  }
+
+  template <typename T>
+  void Vector<T>::BubbleSort(std::function<bool(const T left, const T right)> NeedSwap) {
+    if (this->get_size() < 2) {
+      return;
+    }
+
+    decltype (this->get_size()) almostEnd = this->get_size() - 1;
+    bool wasSwap = false;
+
+    do {
+      wasSwap = false;
+      for (unsigned int i = 0; i < almostEnd; i++) {
+        if ( NeedSwap(vector_[i], vector_[i + 1]) ) {
+          std::swap(vector_[i], vector_[i + 1]);
+          wasSwap = true;
+        } // if
+      } // for
+    } while (wasSwap);
+  }
+
   /*template <typename T>
   Vector<T>::Vector() {
     size_ = 0;
@@ -83,14 +111,6 @@ namespace VECTOR_HORI_VERT {
     vector_ = tmp.vector_;
     tmp.vector_ = nullptr;
     return *this;
-  }
-
-  template <typename T>
-  T& Vector<T>::operator[](unsigned int i) {
-    if (i >= size_) {
-      throw std::out_of_range("Error: Index is out of range!\n");
-    }
-    return vector_[i];
   }
 
   template <typename T>
