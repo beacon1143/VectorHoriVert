@@ -95,7 +95,7 @@ namespace VECTOR_HORI_VERT {
 
   template <typename T>
   Vector<T>::Vector(Vector<T>&& tmp) {
-    filename_ = tmp.filename_;
+    filename_ = std::move(tmp.filename_);
     size_ = tmp.size_;
     vector_ = tmp.vector_;
     tmp.vector = nullptr;
@@ -103,7 +103,7 @@ namespace VECTOR_HORI_VERT {
 
   template <typename T>
   Vector<T>& Vector<T>::operator=(Vector<T>&& tmp) {
-    filename_ = tmp.filename_;
+    filename_ = std::move(tmp.filename_);
     size_ = tmp.size_;
     if (vector_) {
       delete[] vector_;
